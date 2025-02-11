@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- before suite -->
+<suite name="MobileTests" parallel="tests" thread-count="2">
+    <!-- before Test -->
+    <test name="Emulator">
+        <parameter name="platformName" value="Android"/>
+        <parameter name="platformVersion" value="13.0"/>
+        <parameter name="deviceName" value="emulator-5554"/>
+        <parameter name="automationName" value="UIAutomator2"/>
+        <parameter name="APP_Path" value="C:\Users\USER\IdeaProjects\SwagLabsMobile\src\main\resources\APPS\Android.SauceLabs.Mobile.Sample.app.2.7.1.apk">
+        <parameter name="appWaitActivity" value="com.swaglabsmobileapp.MainActivity"/></parameter>
+        <!-- before class -->
+        <classes>
+            <class name="SwagLabMobileTests.PositiveScenario"/>
+        </classes>
+        <!-- After Class -->
+    </test>
+    <!-- After Test -->
+</suite>
+        <!-- After Suite -->
